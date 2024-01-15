@@ -3,17 +3,25 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Navbar from "./navbar";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
+  const descriptionWords = [
+    "Full stack developer based in Vancouver, B.C.",
+    "Experience with various frameworks.",
+    "Seeking to broaden experience and technical expertise.",
+  ];
+
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      className="flex flex-col items-center justify-center px-20 py-10 w-full"
-    >
+    <div className="flex flex-col items-center justify-center ml-5 mt-5 px-20 py-10 w-full">
       <Navbar />
-      <div className="h-full w-full flex flex-col gap-10 mt-20 justify-center m-auto text-start">
-        <motion.div className="flex flex-col text-white relative text-bold text-white text-6xl gap-6 font-mono">
+      <div className="h-full w-full flex flex-col gap-10 py-5 mt-20 justify-center m-auto text-start">
+        <motion.div
+          initial={{ x: -500 }}
+          animate={{ x: 0 }}
+          transition={{ ease: "anticipate", duration: 1, delay: 0.25 }}
+          className="flex flex-col text-white relative text-bold mt-5 text-white text-6xl gap-6 font-mono"
+        >
           Hi,
           <span>
             I'm{" "}
@@ -22,10 +30,28 @@ const Hero = () => {
             </span>
           </span>
         </motion.div>
-        <h2 className="relative text-white font-mono">
-          I'm a full stack developer based in Vancouver, B.C.
-        </h2>
-        <motion.div className="relative inline-flex space-x-4">
+        <motion.h2
+          initial={{ x: -500 }}
+          animate={{ x: 0 }}
+          transition={{ ease: "anticipate", duration: 0.75, delay: 0.25 }}
+          className="relative text-white font-mono"
+        >
+          {"> "}
+          <Typewriter
+            words={descriptionWords}
+            loop={false}
+            typeSpeed={50}
+            delaySpeed={1000}
+            deleteSpeed={50}
+            cursor
+          />
+        </motion.h2>
+        <motion.div
+          initial={{ x: -500 }}
+          animate={{ x: 0 }}
+          transition={{ ease: "anticipate", duration: 0.5, delay: 0.25 }}
+          className="relative inline-flex space-x-4"
+        >
           <button className="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded inline-flex">
             Learn More
             <svg
@@ -61,7 +87,12 @@ const Hero = () => {
             </svg>
           </button>
         </motion.div>
-        <motion.div className="relative inline-flex">
+        <motion.div
+          initial={{ x: -500 }}
+          animate={{ x: 0 }}
+          transition={{ ease: "anticipate", duration: 0.25, delay: 0.25 }}
+          className="relative inline-flex"
+        >
           <motion.a
             href="https://www.instagram.com/_brianval/"
             whileHover={{ scale: 1.3 }}
@@ -106,7 +137,7 @@ const Hero = () => {
           </motion.a>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

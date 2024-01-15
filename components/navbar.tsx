@@ -5,8 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(true);
-
   const navLinks = [
     {
       title: "Home",
@@ -29,55 +27,26 @@ const Navbar = () => {
       href: "/experience",
     },
   ];
-
-  const handleClick = () => {
-    setOpenMenu(!openMenu);
-    console.log(openMenu);
-  };
-
   return (
-    <div className="mb-10 h-full w-full flex relative flex-col justify-center text-start">
-      <div className="rounded-full background-transparent border-white">
-        <button
-          onClick={handleClick}
-          className="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded-full inline-flex"
-        >
-          {openMenu ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
+    <nav className="mb-10 h-full w-full flex relative shadow-lg z-50 justify-center text-start">
+      <motion.div
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ ease: "anticipate", duration: 1, delay: 0.25 }}
+        className="bg-white bg-opacity-10 text-white font-semibold py-2 px-4 border border-white border-opacity-15 rounded-full inline-flex h-15"
+      >
+        <div className="rounded-full background-transparent border-white flex flex-row items-center justify-between m-auto items-center">
+          {navLinks.map((navLink) => (
+            <a
+              href={navLink.href}
+              className="text-white antialiased hover:font-extrabold tracking-normal hover:tracking-wider hover:underline hover:underline-offset-4 font-medium text-sm px-5"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          ) : (
-            <>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18 18 6M6 6l12 12"
-                />
-              </svg>
-            </>
-          )}
-        </button>
-      </div>
-    </div>
+              {navLink.title}
+            </a>
+          ))}
+        </div>
+      </motion.div>
+    </nav>
   );
 };
 

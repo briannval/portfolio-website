@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import Navbar from "./navbar";
 import { Typewriter } from "react-simple-typewriter";
+import Image from "next/image";
+import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
 
 const Hero = () => {
   const descriptionWords = [
@@ -12,14 +13,17 @@ const Hero = () => {
     "Seeking to broaden experience and technical expertise.",
   ];
 
+  const imageStyle = {
+    borderRadius: "50%",
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center ml-5 mt-5 px-20 py-10 w-full">
-      <Navbar />
-      <div className="h-full w-full flex flex-col gap-10 py-5 mt-20 justify-center m-auto text-start">
+    <SecondaryWrapper>
+      <div className="h-full w-full flex flex-col gap-10 py-10 px-10 mt-20 justify-center m-auto text-start">
         <motion.div
-          initial={{ x: -500 }}
-          animate={{ x: 0 }}
-          transition={{ ease: "anticipate", duration: 1, delay: 0.25 }}
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ ease: "anticipate", duration: 1.5 }}
           className="flex flex-col text-white relative text-bold mt-5 text-white text-6xl gap-6 font-mono"
         >
           Hi,
@@ -31,9 +35,9 @@ const Hero = () => {
           </span>
         </motion.div>
         <motion.h2
-          initial={{ x: -500 }}
-          animate={{ x: 0 }}
-          transition={{ ease: "anticipate", duration: 0.75, delay: 0.25 }}
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ ease: "anticipate", duration: 1.4 }}
           className="relative text-white font-mono"
         >
           {"> "}
@@ -47,9 +51,9 @@ const Hero = () => {
           />
         </motion.h2>
         <motion.div
-          initial={{ x: -500 }}
-          animate={{ x: 0 }}
-          transition={{ ease: "anticipate", duration: 0.5, delay: 0.25 }}
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ ease: "anticipate", duration: 1.3 }}
           className="relative inline-flex space-x-4"
         >
           <button className="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded inline-flex">
@@ -88,9 +92,9 @@ const Hero = () => {
           </button>
         </motion.div>
         <motion.div
-          initial={{ x: -500 }}
-          animate={{ x: 0 }}
-          transition={{ ease: "anticipate", duration: 0.25, delay: 0.25 }}
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ ease: "anticipate", duration: 1.2 }}
           className="relative inline-flex"
         >
           <motion.a
@@ -136,8 +140,21 @@ const Hero = () => {
             </svg>
           </motion.a>
         </motion.div>
+        <motion.div
+          animate={{ x: 700, y: -450 }}
+          initial={{ x: 1750, y: -450 }}
+          transition={{ ease: "anticipate", duration: 1.5 }}
+        >
+          <Image
+            src="/static/profile.jpeg"
+            alt="My Profile"
+            width={500}
+            height={500}
+            style={imageStyle}
+          />
+        </motion.div>
       </div>
-    </div>
+    </SecondaryWrapper>
   );
 };
 

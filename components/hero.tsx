@@ -19,7 +19,7 @@ const Hero = () => {
 
   return (
     <SecondaryWrapper>
-      <div className="h-full w-full flex flex-col gap-10 py-10 px-10 mt-20 justify-center m-auto text-start">
+      <div className="h-full w-full flex flex-col gap-10 py-10 px-20 mt-20 justify-center m-auto text-start">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}

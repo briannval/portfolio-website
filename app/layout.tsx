@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import VideoBackground from "@/components/videoBackground";
 import { MainWrapper } from "@/wrappers/MainWrapper";
+import React, { useState, useEffect } from "react";
 
 export const metadata: Metadata = {
   title: "Brian Adhitya",
@@ -16,10 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="overflow-y-scroll">
-        <MainWrapper>
-          <VideoBackground />
-          {children}
-        </MainWrapper>
+        <MainWrapper>{children}</MainWrapper>
       </body>
     </html>
   );

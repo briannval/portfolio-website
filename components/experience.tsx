@@ -49,7 +49,7 @@ const Experience = () => {
   return (
     <SecondaryWrapper>
       <div className="h-full w-full flex flex-col gap-8 py-10 px-10 justify-center m-auto text-start">
-        <h1 className="text-white text-5xl font-mono font-bold relative">
+        <h1 className="text-white text-5xl font-mono font-bold relative ">
           Experience
         </h1>
         {pageData.experience.map((educationData) => (

@@ -1,10 +1,11 @@
 import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
+import Card from "./card";
 
 const About = () => {
   return (
     <SecondaryWrapper>
       <div className="h-full w-full flex flex-col gap-10 py-10 px-10 justify-center m-auto text-start">
-        <h1 className="text-white text-6xl font-mono relative">About Page</h1>
+        About page
       </div>
     </SecondaryWrapper>
   );

@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import VideoBackground from "@/components/videoBackground";
 import { MainWrapper } from "@/wrappers/MainWrapper";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Brian Adhitya",
@@ -18,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="overflow-y-scroll">
         <MainWrapper>
           <VideoBackground />
           {children}

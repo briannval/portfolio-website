@@ -26,7 +26,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="mb-10 h-full w-full flex relative shadow-lg z-50 justify-center text-start">
+    <nav className="mb-10 flex relative shadow-lg justify-center text-start">
       <div className="bg-white bg-opacity-10 text-white font-semibold py-2 px-4 border border-white border-opacity-15 rounded-full inline-flex h-15">
         <div className="rounded-full background-transparent border-white flex flex-row items-center justify-between m-auto items-center">
           {navLinks.map((navLink) => (

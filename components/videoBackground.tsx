@@ -4,7 +4,7 @@ const VideoBackground = () => {
   return (
     <>
       <video autoPlay muted loop className="absolute w-full">
-        <source src="/static/background.mp4" />
+        <source src="/static/backgroundrotated.mp4" />
       </video>
     </>
   );

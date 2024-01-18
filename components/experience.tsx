@@ -53,6 +53,20 @@ const pageData = {
       delay: 1.4,
     },
   ],
+  volunteering: [
+    {
+      title: "Check in desk for Q-SITE",
+      location: "Vancouver, Canada",
+      time: "2023",
+      delay: 1.6,
+    },
+    {
+      title: "Cashier for high school bazaar",
+      location: "Vancouver, Canada",
+      time: "2022",
+      delay: 1.7,
+    },
+  ],
 };
 
 const Experience = () => {
@@ -90,6 +104,17 @@ const Experience = () => {
           Education
         </motion.h1>
         {pageData.education.map((educationData) => (
+          <Card key={educationData.delay} {...educationData} />
+        ))}
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="mt-10 text-white text-5xl font-mono font-bold relative"
+        >
+          Volunteering
+        </motion.h1>
+        {pageData.volunteering.map((educationData) => (
           <Card key={educationData.delay} {...educationData} />
         ))}
       </div>

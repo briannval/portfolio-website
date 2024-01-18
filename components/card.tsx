@@ -6,11 +6,15 @@ interface CardProps {
   title: string;
   location: string;
   time: string;
+  delay: number;
 }
 
 const Card = (data: CardProps) => {
   return (
     <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: data.delay }}
       whileHover={{ scale: 1.04 }}
       className="items-center justify-between p-4 bg-white bg-opacity-10 border border-gray-200 rounded-lg shadow-sm sm:flex relative"
     >

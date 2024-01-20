@@ -20,16 +20,22 @@ const Hero = () => {
   return (
     <SecondaryWrapper>
       <div className="h-full w-full flex flex-col gap-10 py-10 px-20 ml-5 mt-20 justify-center m-auto text-start">
-        <motion.div
+        <motion.h1
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ ease: "anticipate", duration: 1.5 }}
           className="flex flex-col text-white relative text-bold mt-5 text-white text-7xl gap-6 font-mono font-bold"
         >
           Hi,
-          <br></br>
+        </motion.h1>
+        <motion.h1
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ ease: "anticipate", duration: 1.5 }}
+          className="flex flex-col text-white relative text-bold mt-5 text-white text-7xl gap-6 font-mono font-bold"
+        >
           I'm Brian.
-        </motion.div>
+        </motion.h1>
         <motion.h2
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}

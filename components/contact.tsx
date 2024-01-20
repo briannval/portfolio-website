@@ -1,35 +1,90 @@
+"use client";
+
 import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+
+const contactSchema = z.object({
+  name: z.string().min(1, { message: "Your name is required" }),
+  email: z.string().email().min(1, {
+    message: "Your email is required",
+  }),
+  umessage: z
+    .string()
+    .min(1, {
+      message: "Your message is required",
+    })
+    .max(700, {
+      message: "Your message is too long",
+    }),
+});
+
+type Form = z.infer<typeof contactSchema>;
 
 const Contact = () => {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors, isSubmitting },
+  } = useForm<Form>({ resolver: zodResolver(contactSchema) });
+
+  const useSubmit = ({ name, email, umessage }: Form) => {
+    console.log(name, email, umessage);
+  };
+
   return (
     <SecondaryWrapper>
       <div className="h-full w-full flex flex-col gap-10 py-10 px-10 justify-center m-auto text-start">
-        <h1 className="text-white text-6xl font-mono relative">Contact Me</h1>
-        <form>
-          <div className="mb-5 w-1/2">
+        <h1 className="text-white text-5xl font-mono font-bold relative">
+          Contact Me
+        </h1>
+        <form onSubmit={handleSubmit(useSubmit)}>
+          <div className="relative mb-5 w-1/2">
             <input
               type="text"
               id="name"
               placeholder="Your Name"
-              className="font-mono block w-full h-50 p-4 text-white text-xl border border-white border-2 placeholder:text-xl focus:border-4 rounded-lg bg-white bg-opacity-10 outline-none"
+              className="block w-full h-50 p-4 text-white text-xl border border-white border-2 placeholder:text-xl focus:border-4 rounded-lg bg-white bg-opacity-10 outline-none"
+              {...register("name")}
             ></input>
+            {errors.name && (
+              <p className="text-red-500 text-md mt-2">
+                {errors.name?.message}
+              </p>
+            )}
           </div>
-          <div className="mb-5 w-1/2">
+          <div className="relative mb-5 w-1/2">
             <input
-              type="email"
+              type="text"
               id="email"
               placeholder="Your Email"
-              className="font-mono block w-full h-50 p-4 text-white text-xl border border-white border-2 placeholder:text-xl focus:border-4 rounded-lg bg-white bg-opacity-10 outline-none"
+              className="block w-full h-50 p-4 text-white text-xl border border-white border-2 placeholder:text-xl focus:border-4 rounded-lg bg-white bg-opacity-10 outline-none"
+              {...register("email")}
             ></input>
+            {errors.email && (
+              <p className="text-red-500 text-md mt-2">
+                {errors.email?.message}
+              </p>
+            )}
           </div>
-          <div className="mb-5 w-1/2">
+          <div className="relative mb-5 w-1/2">
             <textarea
               id="name"
               placeholder="Message"
-              className="font-mono block w-full h-50 p-4 text-white text-xl border border-white border-2 placeholder:text-xl focus:border-4 rounded-lg bg-white bg-opacity-10 outline-none"
+              className="block w-full h-56 p-4 text-white text-xl border border-white border-2 placeholder:text-xl focus:border-4 rounded-lg bg-white bg-opacity-10 outline-none"
+              {...register("umessage")}
             ></textarea>
+            {errors.umessage && (
+              <p className="text-red-500 text-md mt-2">
+                {errors.umessage?.message}
+              </p>
+            )}
           </div>
-          <button className="font-mono bg-transparent border-2 hover:bg-white text-xl text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded-lg inline-flex">
+          <button
+            type="submit"
+            className="relative bg-transparent border-2 hover:bg-white text-xl text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded-lg inline-flex"
+          >
             Submit
             <svg
               xmlns="http://www.w3.org/2000/svg"

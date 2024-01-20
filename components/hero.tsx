@@ -27,12 +27,8 @@ const Hero = () => {
           className="flex flex-col text-white relative text-bold mt-5 text-white text-7xl gap-6 font-mono font-bold"
         >
           Hi,
-          <span>
-            I'm{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500">
-              Brian.
-            </span>
-          </span>
+          <br></br>
+          I'm Brian.
         </motion.div>
         <motion.h2
           initial={{ x: -100, opacity: 0 }}

@@ -32,7 +32,7 @@ const Hero = () => {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ ease: "anticipate", duration: 1.5 }}
-          className="flex flex-col text-white relative text-bold mt-5 text-white text-7xl gap-6 font-mono font-bold"
+          className="flex flex-col text-white relative text-bold text-white text-7xl gap-6 font-mono font-bold"
         >
           I'm Brian.
         </motion.h1>

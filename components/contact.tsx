@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -36,11 +37,21 @@ const Contact = () => {
   return (
     <SecondaryWrapper>
       <div className="h-full w-full flex flex-col gap-10 py-10 px-10 justify-center m-auto text-start">
-        <h1 className="text-white text-5xl font-mono font-bold relative">
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="text-white text-4xl md:text-5xl font-mono font-bold relative"
+        >
           Contact Me
-        </h1>
+        </motion.h1>
         <form onSubmit={handleSubmit(useSubmit)}>
-          <div className="relative mb-5 w-1/2">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
+            className="relative mb-5 w-full lg:w-1/2"
+          >
             <input
               type="text"
               id="name"
@@ -53,8 +64,13 @@ const Contact = () => {
                 {errors.name?.message}
               </p>
             )}
-          </div>
-          <div className="relative mb-5 w-1/2">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9 }}
+            className="relative mb-5 w-full lg:w-1/2"
+          >
             <input
               type="text"
               id="email"
@@ -67,8 +83,13 @@ const Contact = () => {
                 {errors.email?.message}
               </p>
             )}
-          </div>
-          <div className="relative mb-5 w-1/2">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1 }}
+            className="relative mb-5 w-full lg:w-1/2"
+          >
             <textarea
               id="name"
               placeholder="Message"
@@ -80,8 +101,11 @@ const Contact = () => {
                 {errors.umessage?.message}
               </p>
             )}
-          </div>
-          <button
+          </motion.div>
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.3 }}
             type="submit"
             className="relative bg-transparent border-2 hover:bg-white text-xl text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded-lg inline-flex"
           >
@@ -100,7 +124,7 @@ const Contact = () => {
                 d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
               />
             </svg>
-          </button>
+          </motion.button>
         </form>
       </div>
     </SecondaryWrapper>

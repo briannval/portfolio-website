@@ -8,7 +8,7 @@ interface PageWrapperProps {
 
 export const SecondaryWrapper = ({ children }: PageWrapperProps) => {
   return (
-    <div className="flex flex-col items-center justify-center px-20 ml-5 py-10 w-full">
+    <div className="flex flex-col items-center justify-center ml-5 py-10">
       <Navbar />
       {children}
     </div>

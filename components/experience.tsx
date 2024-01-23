@@ -72,12 +72,12 @@ const pageData = {
 const Experience = () => {
   return (
     <SecondaryWrapper>
-      <div className="h-full w-full flex flex-col gap-10 py-10 px-10 justify-center m-auto text-start">
+      <div className="h-full w-full flex flex-col gap-10 py-10 px-4 md:px-20 justify-center m-auto text-start">
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-white text-5xl font-mono font-bold relative "
+          className="text-white text-4xl md:text-5xl font-mono font-bold relative "
         >
           Experience
         </motion.h1>
@@ -88,7 +88,7 @@ const Experience = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
-          className="mt-10 text-white text-5xl font-mono font-bold relative"
+          className="mt-10 text-white text-4xl md:text-5xl font-mono font-bold relative"
         >
           Achievements
         </motion.h1>
@@ -99,7 +99,7 @@ const Experience = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.1 }}
-          className="mt-10 text-white text-5xl font-mono font-bold relative"
+          className="mt-10 text-white text-4xl md:text-5xl font-mono font-bold relative"
         >
           Education
         </motion.h1>
@@ -110,7 +110,7 @@ const Experience = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="mt-10 text-white text-5xl font-mono font-bold relative"
+          className="mt-10 text-white text-4xl md:text-5xl font-mono font-bold relative"
         >
           Volunteering
         </motion.h1>

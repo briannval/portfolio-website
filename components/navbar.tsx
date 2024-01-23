@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const Navbar = () => {
   const navLinks = [
     {
@@ -9,16 +7,8 @@ const Navbar = () => {
       href: "/",
     },
     {
-      title: "About",
-      href: "/about",
-    },
-    {
       title: "Contact",
       href: "/contact",
-    },
-    {
-      title: "Projects",
-      href: "/projects",
     },
     {
       title: "Experience",
@@ -33,7 +23,7 @@ const Navbar = () => {
             <a
               key={navLink.href}
               href={navLink.href}
-              className="text-white antialiased hover:font-extrabold tracking-normal hover:tracking-wider hover:underline hover:underline-offset-4 font-medium text-sm px-5"
+              className="text-white antialiased hover:font-extrabold tracking-normal hover:tracking-wider hover:underline hover:underline-offset-4 font-medium text-xs md:text-sm px-5"
             >
               {navLink.title}
             </a>

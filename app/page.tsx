@@ -49,7 +49,7 @@ export default function Home() {
                   transition={{ ease: "anticipate", duration: 1.5 }}
                   className="relative text-bold text-6xl md:text-8xl gap-6 font-mono font-bold name bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500"
                 >
-                  Brian Adhitya
+                  Brian
                 </motion.h1>
                 <motion.h2
                   initial={{ x: -100, opacity: 0 }}
@@ -186,14 +186,7 @@ export default function Home() {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ ease: "anticipate", duration: 1.2 }}
                 className="w-0 h-0 lg:w-full lg:h-full items-center justify-center flex py-10"
-              >
-                <Image
-                  src="/static/python.png"
-                  alt="Python"
-                  width={300}
-                  height={300}
-                />
-              </motion.div>
+              ></motion.div>
               <div className="w-full">
                 <h1
                   className="text-white relative text-bold mt-5 text-white text-5xl

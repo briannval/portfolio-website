@@ -41,15 +41,19 @@ export default function Home() {
                   transition={{ ease: "anticipate", duration: 1.5 }}
                   className="text-white relative text-bold mt-5 text-white text-5xl md:text-7xl gap-6 font-mono font-bold"
                 >
-                  Hi, I'm
+                  Hi 👋
                 </motion.h1>
                 <motion.h1
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "anticipate", duration: 1.5 }}
-                  className="relative text-bold text-6xl md:text-8xl gap-6 font-mono font-bold name bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500"
+                  className="relative text-bold text-5xl md:text-7xl gap-6 font-mono font-bold name bg-clip-text text-white"
                 >
-                  Brian
+                  I'm
+                  <strong className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500">
+                    {" "}
+                    Brian
+                  </strong>
                 </motion.h1>
                 <motion.h2
                   initial={{ x: -100, opacity: 0 }}

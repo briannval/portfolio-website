@@ -23,7 +23,7 @@ const Navbar = () => {
             <a
               key={navLink.href}
               href={navLink.href}
-              className="text-white antialiased hover:font-extrabold tracking-normal hover:tracking-wider hover:underline hover:underline-offset-4 font-medium text-xs md:text-sm px-5"
+              className="text-white antialiased hover:font-extrabold tracking-normal hover:tracking-wider hover:underline hover:underline-offset-4 text-xs md:text-sm px-5"
             >
               {navLink.title}
             </a>

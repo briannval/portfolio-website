@@ -11,7 +11,7 @@ export default function Home() {
   const descriptionWords = [
     "Full stack developer based in Vancouver.",
     "Experience with various frameworks.",
-    "Seeking to broaden experience and expertise.",
+    "Seeking to broaden experience.",
   ];
 
   const imageStyle = {
@@ -26,6 +26,7 @@ export default function Home() {
   const moveContact = () => {
     window.location.href = "/contact";
   };
+
   return (
     <>
       <VideoBackground />
@@ -33,22 +34,22 @@ export default function Home() {
         <div className="flex flex-col h-[850px]">
           <SecondaryWrapper>
             <div className="w-full p-0 m-0 flex flex-inline">
-              <div className="h-full w-full flex flex-col gap-8 md:gap-10 lg:py-10 md:px-20 ml-5 mt-8 justify-center m-auto text-start">
+              <div className="h-full w-full flex flex-col gap-4 md:ml-20 md:gap-10 lg:py-10 ml-5 md:px-20 mt-8 justify-center m-auto text-start">
                 <motion.h1
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "anticipate", duration: 1.5 }}
-                  className="flex flex-col text-white relative text-bold mt-5 text-white text-5xl md:text-7xl gap-6 font-mono font-bold"
+                  className="text-white relative text-bold mt-5 text-white text-5xl md:text-7xl gap-6 font-mono font-bold"
                 >
-                  Hi,
+                  Hi, I'm
                 </motion.h1>
                 <motion.h1
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "anticipate", duration: 1.5 }}
-                  className="flex flex-col text-white relative text-bold text-white text-5xl md:text-7xl gap-6 font-mono font-bold"
+                  className="relative text-bold text-6xl md:text-8xl gap-6 font-mono font-bold name bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500"
                 >
-                  I'm Brian.
+                  Brian
                 </motion.h1>
                 <motion.h2
                   initial={{ x: -100, opacity: 0 }}

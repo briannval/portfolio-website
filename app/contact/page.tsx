@@ -64,7 +64,7 @@ export default function Page() {
                 transition={{ delay: 0.5 }}
                 className="text-white text-4xl md:text-5xl font-mono font-bold relative"
               >
-                Contact Me
+                Contact Me 😊
               </motion.h1>
               <form onSubmit={handleSubmit(useSubmit)}>
                 <motion.div

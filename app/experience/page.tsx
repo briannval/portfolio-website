@@ -82,7 +82,7 @@ export default function Home() {
                 transition={{ delay: 0.5 }}
                 className="text-white text-4xl md:text-5xl font-mono font-bold relative "
               >
-                Experience
+                Experience 💻
               </motion.h1>
               {pageData.experience.map((educationData) => (
                 <Card key={educationData.delay} {...educationData} />
@@ -93,7 +93,7 @@ export default function Home() {
                 transition={{ delay: 0.8 }}
                 className="mt-10 text-white text-4xl md:text-5xl font-mono font-bold relative"
               >
-                Achievements
+                Achievements 🏆
               </motion.h1>
               {pageData.achievements.map((educationData) => (
                 <Card key={educationData.delay} {...educationData} />
@@ -104,7 +104,7 @@ export default function Home() {
                 transition={{ delay: 1.1 }}
                 className="mt-10 text-white text-4xl md:text-5xl font-mono font-bold relative"
               >
-                Education
+                Education 📚
               </motion.h1>
               {pageData.education.map((educationData) => (
                 <Card key={educationData.delay} {...educationData} />
@@ -115,7 +115,7 @@ export default function Home() {
                 transition={{ delay: 1.5 }}
                 className="mt-10 text-white text-4xl md:text-5xl font-mono font-bold relative"
               >
-                Volunteering
+                Volunteering 🤝
               </motion.h1>
               {pageData.volunteering.map((educationData) => (
                 <Card key={educationData.delay} {...educationData} />

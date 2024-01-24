@@ -49,7 +49,7 @@ export default function Home() {
                   transition={{ ease: "anticipate", duration: 1.5 }}
                   className="relative text-bold text-6xl md:text-8xl gap-6 font-mono font-bold name bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500"
                 >
-                  Brian
+                  Brian Adhitya
                 </motion.h1>
                 <motion.h2
                   initial={{ x: -100, opacity: 0 }}
@@ -178,6 +178,51 @@ export default function Home() {
                   style={imageStyle}
                 />
               </motion.div>
+            </div>
+            <hr className="my-12 h-0.5 border-t-0 bg-white opacity-100" />
+            <div className="w-full p-0 m-0 flex flex-inline">
+              <motion.div
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ ease: "anticipate", duration: 1.2 }}
+                className="w-0 h-0 lg:w-full lg:h-full items-center justify-center flex py-10"
+              >
+                <Image
+                  src="/static/python.png"
+                  alt="Python"
+                  width={300}
+                  height={300}
+                />
+              </motion.div>
+              <div className="w-full">
+                <h1
+                  className="text-white relative text-bold mt-5 text-white text-5xl
+            md:text-6xl gap-6 font-mono font-bold"
+                >
+                  About Me
+                </h1>
+                <div className="w-10/12">
+                  <p className="text-white relative mt-10 text-white text-xs md:text-lg gap-10 mt-10 font-mono">
+                    I first learnt how to code at the age of 15, where I began
+                    with{" "}
+                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500">
+                      Python
+                    </strong>
+                    . Over the years, I decided to try various other languages,
+                    such as C++, Java, and started getting into
+                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500">
+                      {" "}
+                      web development
+                    </strong>
+                    .<br></br>
+                    <br></br>
+                    Then I realized, tech has been meant for me. Whether
+                    developing websites, building short-term projects, or
+                    teaching young kids how to code, all those things mean so
+                    much to me.
+                  </p>
+                </div>
+              </div>
             </div>
           </SecondaryWrapper>
         </div>

@@ -2,7 +2,7 @@
 
 interface HomeCardProps {
   title: string;
-  content: string;
+  skills: string[];
 }
 
 const HomeCard = (props: HomeCardProps) => {
@@ -19,13 +19,21 @@ const HomeCard = (props: HomeCardProps) => {
       </svg>
       <a href="#">
         <h5 className="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">
-          Need a help in Claim?
+          {props.title}
         </h5>
       </a>
-      <p className="mb-3 font-normal text-gray-500 dark:text-gray-400 text-center">
-        Go to this step by step guideline process on how to certify for your
-        weekly benefits:
-      </p>
+      <div className="grid grid-cols-3 gap-1 mt-4 h-36">
+        {props.skills.map((skill) => {
+          return (
+            <span
+              key={skill}
+              className="text-center relative bg-white bg-opacity-10 text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded h-5"
+            >
+              {skill}
+            </span>
+          );
+        })}
+      </div>
     </div>
   );
 };

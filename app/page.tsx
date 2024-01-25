@@ -275,7 +275,7 @@ export default function Home() {
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ ease: "anticipate", duration: 2 }}
-              className="text-white relative text-bold mt-20 pt-20 md:mt-5 text-white text-4xl
+              className="text-white relative text-center text-bold mt-20 pt-20 md:mt-5 text-white text-4xl
             md:text-6xl gap-6 font-extrabold"
             >
               Skills and Technologies
@@ -284,7 +284,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ ease: "anticipate", duration: 2.2 }}
-              className="mt-20 grid grid-cols-3 gap-16 mb-20"
+              className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-16 mb-20"
             >
               {skillsTechnologies.map((props) => {
                 return <HomeCard key={props.title} {...props} />;

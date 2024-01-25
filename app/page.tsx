@@ -6,6 +6,7 @@ import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
 import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
+import HomeCard from "@/components/homeCard";
 
 export default function Home() {
   const descriptionWords = [
@@ -39,7 +40,7 @@ export default function Home() {
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "anticipate", duration: 1.5 }}
-                  className="text-white relative text-bold mt-5 text-white text-5xl md:text-7xl gap-6 font-mono font-bold"
+                  className="text-white relative font-semibold text-white text-7xl md:text-9xl gap-6 font-bold"
                 >
                   Hi 👋
                 </motion.h1>
@@ -47,10 +48,10 @@ export default function Home() {
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "anticipate", duration: 1.5 }}
-                  className="relative text-bold text-5xl md:text-7xl gap-6 font-mono font-bold name bg-clip-text text-white"
+                  className="relative text-bold text-7xl md:text-9xl gap-6 font-semibold name bg-clip-text text-white"
                 >
                   I'm
-                  <strong className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500">
+                  <strong className="bg-clip-text text-transparent font-extrabold bg-gradient-to-r from-cyan-600 to-violet-500">
                     {" "}
                     Brian
                   </strong>
@@ -59,7 +60,7 @@ export default function Home() {
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "anticipate", duration: 1.4 }}
-                  className="relative text-white font-mono text-xs md:text-lg"
+                  className="relative text-white font-mono mt-4 text-xs md:text-lg"
                 >
                   {"> "}
                   <Typewriter
@@ -75,7 +76,7 @@ export default function Home() {
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "anticipate", duration: 1.3 }}
-                  className="relative inline-flex space-x-4"
+                  className="relative inline-flex space-x-4 mt-4"
                 >
                   <button
                     onClick={moveExperience}
@@ -99,7 +100,7 @@ export default function Home() {
                   </button>
                   <button
                     onClick={moveContact}
-                    className="bg-transparent hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded inline-flex"
+                    className="bg-transparent hover:bg-white text-md text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded inline-flex"
                   >
                     Contact
                     <svg
@@ -118,11 +119,56 @@ export default function Home() {
                     </svg>
                   </button>
                 </motion.div>
+              </div>
+              <motion.div
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ ease: "anticipate", duration: 1.2 }}
+                className="w-0 h-0 lg:w-full lg:h-full items-center justify-center flex py-10 mt-14"
+              >
+                <Image
+                  src="/static/profile.jpeg"
+                  alt="My Profile"
+                  width={500}
+                  height={500}
+                  style={imageStyle}
+                />
+              </motion.div>
+            </div>
+            <hr className="my-12 h-0.5 border-t-0 bg-white opacity-100" />
+            <motion.h1
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ ease: "anticipate", duration: 1.5 }}
+              className="text-white relative text-bold mt-20 pt-20 md:mt-5 text-white text-4xl
+            md:text-6xl gap-6 font-extrabold"
+            >
+              About Me
+            </motion.h1>
+            <div className="w-1/2 items-center mb-20">
+              <p className="text-white text-center relative mt-10 text-white text-xs md:text-lg gap-10 mt-10 font-mono">
+                I first learnt how to code at the age of 15, where I began with{" "}
+                <strong className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500">
+                  Python
+                </strong>
+                . Over the years, I decided to try various other languages, such
+                as C++, Java, and started getting into
+                <strong className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500">
+                  {" "}
+                  web development
+                </strong>
+                .<br></br>
+                <br></br>
+                Then I realized, tech has been meant for me. Whether developing
+                websites, building short-term projects, or teaching young kids
+                how to code, all those things mean so much to me.
+              </p>
+              <div className="flex justify-center items-center">
                 <motion.div
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "anticipate", duration: 1.2 }}
-                  className="relative inline-flex"
+                  className="relative inline-flex items-center mt-6"
                 >
                   <motion.a
                     href="https://www.instagram.com/_brianval/"
@@ -168,58 +214,22 @@ export default function Home() {
                   </motion.a>
                 </motion.div>
               </div>
-              <motion.div
-                initial={{ x: 0, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ ease: "anticipate", duration: 1.2 }}
-                className="w-0 h-0 lg:w-full lg:h-full items-center justify-center flex py-10 mt-14"
-              >
-                <Image
-                  src="/static/profile.jpeg"
-                  alt="My Profile"
-                  width={500}
-                  height={500}
-                  style={imageStyle}
-                />
-              </motion.div>
             </div>
-            <hr className="my-12 h-0.5 border-t-0 bg-white opacity-100" />
-            <div className="w-full p-0 m-0 flex flex-inline">
-              <motion.div
-                initial={{ x: 0, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ ease: "anticipate", duration: 1.2 }}
-                className="w-0 h-0 lg:w-full lg:h-full items-center justify-center flex py-10"
-              ></motion.div>
-              <div className="w-full">
-                <h1
-                  className="text-white relative text-bold mt-5 text-white text-5xl
-            md:text-6xl gap-6 font-mono font-bold"
-                >
-                  About Me
-                </h1>
-                <div className="w-10/12">
-                  <p className="text-white relative mt-10 text-white text-xs md:text-lg gap-10 mt-10 font-mono">
-                    I first learnt how to code at the age of 15, where I began
-                    with{" "}
-                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500">
-                      Python
-                    </strong>
-                    . Over the years, I decided to try various other languages,
-                    such as C++, Java, and started getting into
-                    <strong className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500">
-                      {" "}
-                      web development
-                    </strong>
-                    .<br></br>
-                    <br></br>
-                    Then I realized, tech has been meant for me. Whether
-                    developing websites, building short-term projects, or
-                    teaching young kids how to code, all those things mean so
-                    much to me.
-                  </p>
-                </div>
-              </div>
+            <motion.h1
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ ease: "anticipate", duration: 1.5 }}
+              className="text-white relative text-bold mt-20 pt-20 md:mt-5 text-white text-4xl
+            md:text-6xl gap-6 font-extrabold"
+            >
+              Skills and Technologies
+            </motion.h1>
+            <div className="mt-20 grid grid-cols-3 gap-12">
+              <HomeCard />
+
+              <HomeCard />
+
+              <HomeCard />
             </div>
           </SecondaryWrapper>
         </div>

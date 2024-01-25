@@ -29,6 +29,8 @@ export default function Home() {
         "Next JS",
         "React",
       ],
+      svg_d:
+        "M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5",
     },
     {
       title: "Developer Tools",
@@ -43,6 +45,8 @@ export default function Home() {
         "Visual Studio",
         "Neovim",
       ],
+      svg_d:
+        "M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125",
     },
     {
       title: "Miscellaneous",
@@ -57,6 +61,8 @@ export default function Home() {
         "Review",
         "Optimization",
       ],
+      svg_d:
+        "M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18",
     },
   ];
 
@@ -190,7 +196,12 @@ export default function Home() {
             >
               About Me
             </motion.h1>
-            <div className="w-1/2 items-center mb-20">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ease: "anticipate", duration: 1.7 }}
+              className="w-1/2 items-center mb-20"
+            >
               <p className="text-white text-center relative mt-10 text-white text-xs md:text-lg gap-10 mt-10 font-mono">
                 I first learnt how to code at the age of 15, where I began with{" "}
                 <strong className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-500">
@@ -259,21 +270,31 @@ export default function Home() {
                   </motion.a>
                 </motion.div>
               </div>
-            </div>
+            </motion.div>
             <motion.h1
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ ease: "anticipate", duration: 1.5 }}
+              transition={{ ease: "anticipate", duration: 2 }}
               className="text-white relative text-bold mt-20 pt-20 md:mt-5 text-white text-4xl
             md:text-6xl gap-6 font-extrabold"
             >
               Skills and Technologies
             </motion.h1>
-            <div className="mt-20 grid grid-cols-3 gap-16">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ease: "anticipate", duration: 2.2 }}
+              className="mt-20 grid grid-cols-3 gap-16 mb-20"
+            >
               {skillsTechnologies.map((props) => {
                 return <HomeCard key={props.title} {...props} />;
               })}
-            </div>
+            </motion.div>
+            <motion.h1 className="text-white text-center relative mt-20 font-extrabold">
+              Website created by Brian Adhitya 2024
+              <br></br>
+              brianvalentinoadhitya@gmail.com
+            </motion.h1>
           </SecondaryWrapper>
         </div>
       </main>

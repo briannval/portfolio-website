@@ -15,6 +15,51 @@ export default function Home() {
     "Seeking to broaden experience.",
   ];
 
+  const skillsTechnologies = [
+    {
+      title: "Languages / Frameworks",
+      skills: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Typescript",
+        "C++",
+        "Java",
+        "Python",
+        "Next JS",
+        "React",
+      ],
+    },
+    {
+      title: "Developer Tools",
+      skills: [
+        "REST",
+        "APIs",
+        "Git",
+        "Github",
+        "Docker",
+        "Auth",
+        "MongoDB",
+        "Visual Studio",
+        "Neovim",
+      ],
+    },
+    {
+      title: "Miscellaneous",
+      skills: [
+        "Remote work",
+        "Presentation",
+        "Networking",
+        "Teamwork",
+        "Learning",
+        "Adaptability",
+        "Collaborative",
+        "Review",
+        "Optimization",
+      ],
+    },
+  ];
+
   const imageStyle = {
     borderRadius: "50%",
     border: "4px solid white",
@@ -224,12 +269,10 @@ export default function Home() {
             >
               Skills and Technologies
             </motion.h1>
-            <div className="mt-20 grid grid-cols-3 gap-12">
-              <HomeCard />
-
-              <HomeCard />
-
-              <HomeCard />
+            <div className="mt-20 grid grid-cols-3 gap-16">
+              {skillsTechnologies.map((props) => {
+                return <HomeCard key={props.title} {...props} />;
+              })}
             </div>
           </SecondaryWrapper>
         </div>

@@ -15,16 +15,16 @@ const HomeCard = (props: HomeCardProps) => {
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="white"
-        className="my-4 w-6 h-6"
+        className="md:my-4 w-6 h-6"
       >
         <path stroke-linecap="round" stroke-linejoin="round" d={props.svg_d} />
       </svg>
       <a href="#">
-        <h5 className="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">
+        <h5 className="relative mb-2 text-2xl font-semibold tracking-tight text-center text-white">
           {props.title}
         </h5>
       </a>
-      <div className="grid grid-cols-3 gap-1 mt-4 h-36">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-1 mt-4 h-56 md:h-36">
         {props.skills.map((skill) => {
           return (
             <span

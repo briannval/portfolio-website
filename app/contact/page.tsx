@@ -66,7 +66,7 @@ export default function Page() {
                   transition={{ delay: 0.5 }}
                   className="text-white text-4xl md:text-5xl font-mono font-bold relative"
                 >
-                  Contact Me 😊
+                  Contact Me
                 </motion.h1>
                 <form onSubmit={handleSubmit(useSubmit)}>
                   <motion.div
@@ -155,7 +155,7 @@ export default function Page() {
                 </form>
               </div>
               <div className="h-full w-0 md:w-full flex flex-col gap-10 py-10 px-4 md:px-20 justify-center m-auto text-start">
-                <div className="flex-col">
+                <div className="w-0 md:w-full flex-col">
                   <motion.h1
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

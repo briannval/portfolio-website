@@ -27,7 +27,7 @@ const pageData = {
       delay: 0.9,
     },
     {
-      title: "Online Tutor at C.O.D.E Initiative",
+      title: "Programming Tutor at C.O.D.E Initiative",
       location: "Vancouver, Canada",
       time: "2023 - Present",
       delay: 1,

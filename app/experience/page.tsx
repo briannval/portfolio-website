@@ -21,6 +21,12 @@ const pageData = {
   ],
   experience: [
     {
+      title: "Web Developer at BBRwanda",
+      location: "Vancouver, Canada",
+      time: "2024 - Present",
+      delay: 0.8,
+    },
+    {
       title: "Student Developer at UBC CSSS",
       location: "Vancouver, Canada",
       time: "2023 - Present",

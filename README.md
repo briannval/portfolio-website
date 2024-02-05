@@ -29,13 +29,13 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd StarryPort
 ```
 
 Install dependencies
 
 ```bash
-  npm install
+  npm i
 ```
 
 Start the server

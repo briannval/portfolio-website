@@ -71,10 +71,12 @@ export default function Home() {
     border: "4px solid white",
   };
 
+  // link to experience page
   const moveExperience = () => {
     window.location.href = "/experience";
   };
 
+  // link to contact page
   const moveContact = () => {
     window.location.href = "/contact";
   };

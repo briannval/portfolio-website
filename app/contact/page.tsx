@@ -25,6 +25,7 @@ const contactSchema = z.object({
 
 type Form = z.infer<typeof contactSchema>;
 
+// Contact Page
 export default function Page() {
   const [submitted, setSubmitted] = useState(false);
   const {

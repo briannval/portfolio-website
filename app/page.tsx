@@ -8,6 +8,7 @@ import Image from "next/image";
 import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
 import HomeCard from "@/components/homeCard";
 
+// Home Page
 export default function Home() {
   const descriptionWords = [
     "Full stack developer based in Vancouver.",

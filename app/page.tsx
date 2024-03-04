@@ -244,7 +244,7 @@ export default function Home() {
                     </svg>
                   </motion.a>
                   <motion.a
-                    href="https://www.linkedin.com/in/brian-valentino-b43b74262/"
+                    href="https://www.linkedin.com/in/briannval/"
                     whileHover={{ scale: 1.3 }}
                     target="_blank"
                   >

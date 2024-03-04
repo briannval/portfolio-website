@@ -21,12 +21,6 @@ const pageData = {
   ],
   experience: [
     {
-      title: "Software Engineer Intern at SMS Perkasa",
-      location: "Surabaya, Indonesia",
-      time: "2024 - Present",
-      delay: 0.8,
-    },
-    {
       title: "Web Developer at BBRwanda",
       location: "Vancouver, Canada",
       time: "2024 - Present",

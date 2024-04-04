@@ -7,81 +7,11 @@ import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
 import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
 import HomeCard from "@/components/homeCard";
+import { imageStyle } from "./styles/styles";
+import { descriptionWords, skillsTechnologies } from "./data/data";
 
 // Home Page
 export default function Home() {
-  const descriptionWords = [
-    "Full stack developer based in Vancouver.",
-    "Experience with various frameworks.",
-    "Seeking to broaden experience.",
-  ];
-
-  const skillsTechnologies = [
-    {
-      title: "Languages / Frameworks",
-      skills: [
-        "HTML",
-        "CSS",
-        "Javascript",
-        "Typescript",
-        "C++",
-        "Java",
-        "Python",
-        "Next JS",
-        "React",
-      ],
-      svg_d:
-        "M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5",
-    },
-    {
-      title: "Developer Tools",
-      skills: [
-        "REST",
-        "APIs",
-        "Git",
-        "Github",
-        "Docker",
-        "Auth",
-        "MongoDB",
-        "Visual Studio",
-        "Neovim",
-      ],
-      svg_d:
-        "M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125",
-    },
-    {
-      title: "Miscellaneous",
-      skills: [
-        "Remote work",
-        "Presentation",
-        "Networking",
-        "Teamwork",
-        "Learning",
-        "Adaptability",
-        "Collaborative",
-        "Review",
-        "Optimization",
-      ],
-      svg_d:
-        "M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18",
-    },
-  ];
-
-  const imageStyle = {
-    borderRadius: "50%",
-    border: "4px solid white",
-  };
-
-  // link to experience page
-  const moveExperience = () => {
-    window.location.href = "/experience";
-  };
-
-  // link to contact page
-  const moveContact = () => {
-    window.location.href = "/contact";
-  };
-
   return (
     <>
       <VideoBackground />
@@ -94,7 +24,7 @@ export default function Home() {
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "anticipate", duration: 1.5 }}
-                  className="text-white relative font-semibold text-white text-7xl md:text-9xl gap-6 font-bold"
+                  className="text-white relative  text-white text-7xl md:text-9xl gap-6 font-bold font-mono"
                 >
                   Hi 👋
                 </motion.h1>
@@ -133,7 +63,7 @@ export default function Home() {
                   className="relative inline-flex space-x-4 mt-4"
                 >
                   <button
-                    onClick={moveExperience}
+                    onClick={() => (window.location.href = "/experience")}
                     className="bg-transparent text-md hover:bg-white text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded inline-flex"
                   >
                     Learn More
@@ -153,7 +83,9 @@ export default function Home() {
                     </svg>
                   </button>
                   <button
-                    onClick={moveContact}
+                    onClick={() => {
+                      window.location.href = "/contact";
+                    }}
                     className="bg-transparent hover:bg-white text-md text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded inline-flex"
                   >
                     Contact

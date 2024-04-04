@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import Link from "next/link";
+import axios from "axios";
 
 const contactSchema = z.object({
   name: z.string().min(1, { message: "Your name is required" }),
@@ -34,8 +35,21 @@ export default function Page() {
     formState: { errors },
   } = useForm<Form>({ resolver: zodResolver(contactSchema) });
 
-  const useSubmit = ({ name, email, umessage }: Form) => {
+  const useSubmit = async ({ name, email, umessage }: Form) => {
     console.log(name, email, umessage);
+    try {
+      const res = await axios.post(
+        'http://brianadhitya.vercel.app/api/send',
+        {
+          name,
+          email,
+          umessage
+        }
+      )
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
     setSubmitted(true);
   };
   return (

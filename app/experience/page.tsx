@@ -3,77 +3,7 @@
 import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
 import Card from "@/components/card";
 import { motion } from "framer-motion";
-
-const pageData = {
-  education: [
-    {
-      title: "University of British Columbia",
-      location: "Vancouver, Canada",
-      time: "2023 - Present",
-      delay: 0.6,
-    },
-    {
-      title: "Pelangi Kasih School",
-      location: "Jakarta, Indonesia",
-      time: "2011 - 2023",
-      delay: 0.7,
-    },
-  ],
-  experience: [
-    {
-      title: "Web Developer at BBRwanda",
-      location: "Vancouver, Canada",
-      time: "2024 - Present",
-      delay: 0.8,
-    },
-    {
-      title: "Student Developer at UBC CSSS",
-      location: "Vancouver, Canada",
-      time: "2023 - Present",
-      delay: 0.9,
-    },
-    {
-      title: "Programming Tutor at C.O.D.E Initiative",
-      location: "Vancouver, Canada",
-      time: "2023 - Present",
-      delay: 1,
-    },
-  ],
-  achievements: [
-    {
-      title: "3rd Place at National CodeOlympiad",
-      location: "Jakarta, Indonesia",
-      time: "2021",
-      delay: 1.2,
-    },
-    {
-      title: "1st Place at Actuarial Science Competition",
-      location: "Jakarta, Indonesia",
-      time: "2022",
-      delay: 1.3,
-    },
-    {
-      title: "2nd Place at STEM INC Competition",
-      location: "Jakarta, Indonesia",
-      time: "2023",
-      delay: 1.4,
-    },
-  ],
-  volunteering: [
-    {
-      title: "Check in desk for Q-SITE",
-      location: "Vancouver, Canada",
-      time: "2023",
-      delay: 1.6,
-    },
-    {
-      title: "Cashier for high school bazaar",
-      location: "Vancouver, Canada",
-      time: "2022",
-      delay: 1.7,
-    },
-  ],
-};
+import { experiencePageData } from "../data/data";
 
 // Experience Page
 export default function Home() {
@@ -91,8 +21,8 @@ export default function Home() {
               >
                 Experience 💻
               </motion.h1>
-              {pageData.experience.map((educationData) => (
-                <Card key={educationData.delay} {...educationData} />
+              {experiencePageData.experience.map((experienceData) => (
+                <Card key={experienceData.delay} {...experienceData} />
               ))}
               <motion.h1
                 initial={{ opacity: 0 }}
@@ -102,8 +32,8 @@ export default function Home() {
               >
                 Achievements 🏆
               </motion.h1>
-              {pageData.achievements.map((educationData) => (
-                <Card key={educationData.delay} {...educationData} />
+              {experiencePageData.achievements.map((achievementData) => (
+                <Card key={achievementData.delay} {...achievementData} />
               ))}
               <motion.h1
                 initial={{ opacity: 0 }}
@@ -113,7 +43,7 @@ export default function Home() {
               >
                 Education 📚
               </motion.h1>
-              {pageData.education.map((educationData) => (
+              {experiencePageData.education.map((educationData) => (
                 <Card key={educationData.delay} {...educationData} />
               ))}
               <motion.h1
@@ -124,8 +54,8 @@ export default function Home() {
               >
                 Volunteering 🤝
               </motion.h1>
-              {pageData.volunteering.map((educationData) => (
-                <Card key={educationData.delay} {...educationData} />
+              {experiencePageData.volunteering.map((volunteeringData) => (
+                <Card key={volunteeringData.delay} {...volunteeringData} />
               ))}
             </div>
           </SecondaryWrapper>

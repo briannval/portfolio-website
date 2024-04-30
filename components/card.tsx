@@ -32,12 +32,12 @@ const Card = (data: CardProps) => {
           <Image
             src={data.logo}
             alt="Logo"
-            width={"50"}
-            height={"50"}
+            width={"70"}
+            height={"70"}
             style={imageStyle}
           />
         </div>
-        <div className="text-2xl font-bold text-white">
+        <div className="text-3xl font-bold text-white">
           {data.title}
           <br></br>
           <div className="flex mt-2">
@@ -56,7 +56,7 @@ const Card = (data: CardProps) => {
             </svg>
             <motion.h1
               animate={{ x: 8, y: -4 }}
-              className="font-normal text-lg text-gray-400"
+              className="font-normal text-xl text-gray-400"
             >
               {data.location}
             </motion.h1>

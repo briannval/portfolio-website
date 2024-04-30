@@ -17,6 +17,13 @@ export const experiencePageData = {
   ],
   experience: [
     {
+      title: "Web Developer at Enactus UBC",
+      location: "Vancouver, Canada",
+      time: "2024 - Present",
+      delay: 0.7,
+      logo: "/enactus.jpeg",
+    },
+    {
       title: "Software Engineer at SMS Perkasa",
       location: "Surabaya, Indonesia",
       time: "2024 - Present",
@@ -26,7 +33,7 @@ export const experiencePageData = {
     {
       title: "Web Developer at BBRwanda",
       location: "Vancouver, Canada",
-      time: "2024 - Present",
+      time: "2024",
       delay: 0.8,
       logo: "/bbrwanda.png",
     },

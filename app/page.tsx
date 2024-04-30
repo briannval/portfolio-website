@@ -24,7 +24,7 @@ export default function Home() {
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ ease: "anticipate", duration: 1.5 }}
-                  className="text-white relative  text-white text-7xl md:text-9xl gap-6 font-bold font-mono"
+                  className="text-white relative  text-white text-7xl md:text-9xl gap-6 font-bold"
                 >
                   Hi 👋
                 </motion.h1>

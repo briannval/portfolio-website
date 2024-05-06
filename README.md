@@ -23,13 +23,13 @@ To run the project locally, follow the steps below:
 Clone the project
 
 ```bash
-  git clone https://github.com/briannval/StarryPort.git
+  git clone https://github.com/briannval/portfolio-website.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd StarryPort
+  cd portfolio-website
 ```
 
 Install dependencies

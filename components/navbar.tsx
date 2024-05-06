@@ -1,20 +1,34 @@
 "use client";
 
+import { Page } from "@/context/activePage";
+import { useActivePageContext } from "@/context/activePageContext";
+
+interface NavLinkProps {
+  title: String;
+  href: String;
+  page: Page;
+}
+
+const navLinks = [
+  {
+    title: "Home",
+    href: "/",
+    page: Page.HOME,
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+    page: Page.CONTACT,
+  },
+  {
+    title: "Experience",
+    href: "/experience",
+    page: Page.EXPERIENCE,
+  },
+];
 const Navbar = () => {
-  const navLinks = [
-    {
-      title: "Home",
-      href: "/",
-    },
-    {
-      title: "Contact",
-      href: "/contact",
-    },
-    {
-      title: "Experience",
-      href: "/experience",
-    },
-  ];
+  const { activePage } = useActivePageContext();
+
   return (
     <nav className="mb-10 flex relative shadow-lg justify-center text-start">
       <div className="bg-white bg-opacity-10 text-white font-semibold py-2 px-4 border border-white border-opacity-15 rounded-full inline-flex h-15">
@@ -23,9 +37,15 @@ const Navbar = () => {
             <a
               key={navLink.href}
               href={navLink.href}
-              className="text-white antialiased hover:font-extrabold tracking-normal hover:tracking-wider hover:underline hover:underline-offset-4 text-xs md:text-sm px-5"
+              className="text-white antialiased tracking-normal hover:tracking-wider hover:underline hover:underline-offset-4 text-xs md:text-sm px-5"
             >
-              {navLink.title}
+              <span
+                className={
+                  activePage === navLink.page ? "font-extrabold text-lg" : ""
+                }
+              >
+                {navLink.title}
+              </span>{" "}
             </a>
           ))}
         </div>

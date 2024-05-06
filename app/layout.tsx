@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { MainWrapper } from "@/wrappers/MainWrapper";
 import React from "react";
+import ActivePageContextProvider from "@/context/activePageContext";
 
 export const metadata: Metadata = {
   title: "Brian Adhitya",
@@ -16,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="overflow-y-scroll">
-        <MainWrapper>{children}</MainWrapper>
+        <ActivePageContextProvider>
+          <MainWrapper>{children}</MainWrapper>
+        </ActivePageContextProvider>
       </body>
     </html>
   );

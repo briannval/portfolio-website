@@ -4,6 +4,9 @@ import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
 import Card from "@/components/card";
 import { motion } from "framer-motion";
 import { experiencePageData } from "../data/data";
+import { useEffect } from "react";
+import { Page } from "@/context/activePage";
+import { useActivePageContext } from "@/context/activePageContext";
 
 interface ExperienceHeaderProps {
   title: String;
@@ -44,6 +47,12 @@ const ExperienceHeaderData = {
 
 // Experience Page
 export default function Home() {
+  const { activePage, setActivePage } = useActivePageContext();
+
+  useEffect(() => {
+    setActivePage(Page.EXPERIENCE);
+  }, [activePage]);
+
   return (
     <>
       <main className="h-full w-full">

@@ -5,9 +5,11 @@ import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
+import { useActivePageContext } from "@/context/activePageContext";
+import { Page } from "@/context/activePage";
 
 const contactSchema = z.object({
   name: z.string().min(1, { message: "Your name is required" }),
@@ -27,7 +29,13 @@ const contactSchema = z.object({
 type Form = z.infer<typeof contactSchema>;
 
 // Contact Page
-export default function Page() {
+export default function Contact() {
+  const { activePage, setActivePage } = useActivePageContext();
+
+  useEffect(() => {
+    setActivePage(Page.CONTACT);
+  }, [activePage]);
+
   const [submitted, setSubmitted] = useState(false);
   const {
     handleSubmit,

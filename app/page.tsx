@@ -2,16 +2,24 @@
 
 import VideoBackground from "@/components/videoBackground";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
 import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
 import HomeCard from "@/components/homeCard";
 import { imageStyle } from "./styles/styles";
 import { descriptionWords, skillsTechnologies } from "./data/data";
+import { useActivePageContext } from "@/context/activePageContext";
+import { Page } from "@/context/activePage";
 
 // Home Page
 export default function Home() {
+  const { activePage, setActivePage } = useActivePageContext();
+
+  useEffect(() => {
+    setActivePage(Page.HOME);
+  }, [activePage]);
+
   return (
     <>
       <VideoBackground />

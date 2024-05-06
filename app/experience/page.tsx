@@ -5,6 +5,43 @@ import Card from "@/components/card";
 import { motion } from "framer-motion";
 import { experiencePageData } from "../data/data";
 
+interface ExperienceHeaderProps {
+  title: String;
+  delay: number;
+}
+
+const ExperienceHeader = (props: ExperienceHeaderProps) => {
+  return (
+    <motion.h1
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: props.delay }}
+      className="text-white text-4xl md:text-5xl font-bold relative "
+    >
+      {props.title}
+    </motion.h1>
+  );
+};
+
+const ExperienceHeaderData = {
+  experience: {
+    title: "Experience 💻",
+    delay: 0.5,
+  },
+  achievements: {
+    title: "Achievements 🏆",
+    delay: 0.8,
+  },
+  education: {
+    title: "Education 📚",
+    delay: 1.1,
+  },
+  volunteering: {
+    title: "Volunteering 🤝",
+    delay: 1.5,
+  },
+};
+
 // Experience Page
 export default function Home() {
   return (
@@ -13,47 +50,19 @@ export default function Home() {
         <div className="flex flex-col h-[850px]">
           <SecondaryWrapper>
             <div className="h-full w-full flex flex-col gap-10 py-10 px-4 md:px-20 justify-center m-auto text-start">
-              <motion.h1
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="text-white text-4xl md:text-5xl font-mono font-bold relative "
-              >
-                Experience 💻
-              </motion.h1>
+              <ExperienceHeader {...ExperienceHeaderData.experience} />
               {experiencePageData.experience.map((experienceData) => (
                 <Card key={experienceData.delay} {...experienceData} />
               ))}
-              <motion.h1
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.8 }}
-                className="mt-10 text-white text-4xl md:text-5xl font-mono font-bold relative"
-              >
-                Achievements 🏆
-              </motion.h1>
+              <ExperienceHeader {...ExperienceHeaderData.achievements} />
               {experiencePageData.achievements.map((achievementData) => (
                 <Card key={achievementData.delay} {...achievementData} />
               ))}
-              <motion.h1
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.1 }}
-                className="mt-10 text-white text-4xl md:text-5xl font-mono font-bold relative"
-              >
-                Education 📚
-              </motion.h1>
+              <ExperienceHeader {...ExperienceHeaderData.education} />
               {experiencePageData.education.map((educationData) => (
                 <Card key={educationData.delay} {...educationData} />
               ))}
-              <motion.h1
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5 }}
-                className="mt-10 text-white text-4xl md:text-5xl font-mono font-bold relative"
-              >
-                Volunteering 🤝
-              </motion.h1>
+              <ExperienceHeader {...ExperienceHeaderData.volunteering} />
               {experiencePageData.volunteering.map((volunteeringData) => (
                 <Card key={volunteeringData.delay} {...volunteeringData} />
               ))}

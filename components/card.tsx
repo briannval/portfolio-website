@@ -32,12 +32,12 @@ const Card = (data: CardProps) => {
           <Image
             src={data.logo}
             alt="Logo"
-            width={"70"}
-            height={"70"}
+            width={"60"}
+            height={"60"}
             style={imageStyle}
           />
         </div>
-        <div className="text-3xl font-bold text-white">
+        <div className="text-2xl font-bold text-white">
           {data.title}
           <br></br>
           <div className="flex mt-2">

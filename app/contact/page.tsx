@@ -38,14 +38,11 @@ export default function Page() {
   const useSubmit = async ({ name, email, umessage }: Form) => {
     console.log(name, email, umessage);
     try {
-      const res = await axios.post(
-        'http://brianadhitya.vercel.app/api/send',
-        {
-          name,
-          email,
-          umessage
-        }
-      )
+      const res = await axios.post("http://brianadhitya.vercel.app/api/send", {
+        name,
+        email,
+        umessage,
+      });
       console.log(res);
     } catch (e) {
       console.log(e);
@@ -79,7 +76,7 @@ export default function Page() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
-                  className="text-white text-4xl md:text-5xl font-mono font-bold relative"
+                  className="text-white text-4xl md:text-6xl font-bold relative"
                 >
                   Contact Me
                 </motion.h1>
@@ -175,7 +172,7 @@ export default function Page() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
-                    className="text-white text-4xl md:text-5xl font-mono font-bold relative"
+                    className="text-white text-4xl md:text-6xl font-bold relative"
                   >
                     Or..
                   </motion.h1>

@@ -4,12 +4,12 @@ import { Page } from "@/context/activePage";
 import { useActivePageContext } from "@/context/activePageContext";
 
 interface NavLinkProps {
-  title: String;
-  href: String;
+  title: string;
+  href: string;
   page: Page;
 }
 
-const navLinks = [
+const navLinks: NavLinkProps[] = [
   {
     title: "Home",
     href: "/",

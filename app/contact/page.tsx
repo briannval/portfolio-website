@@ -45,16 +45,6 @@ export default function Contact() {
 
   const useSubmit = async ({ name, email, umessage }: Form) => {
     console.log(name, email, umessage);
-    try {
-      const res = await axios.post("http://brianadhitya.vercel.app/api/send", {
-        name,
-        email,
-        umessage,
-      });
-      console.log(res);
-    } catch (e) {
-      console.log(e);
-    }
     setSubmitted(true);
   };
   return (

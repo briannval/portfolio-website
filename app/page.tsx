@@ -8,7 +8,7 @@ import Image from "next/image";
 import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
 import HomeCard from "@/components/homeCard";
 import { imageStyle } from "./styles/styles";
-import { descriptionWords, skillsTechnologies } from "./data/data";
+import { descriptionWords, skillsTechnologies } from "@/app/data/data";
 import { useActivePageContext } from "@/context/activePageContext";
 import { Page } from "@/context/activePage";
 

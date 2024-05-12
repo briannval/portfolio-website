@@ -1,31 +1,8 @@
 "use client";
 
-import { Page } from "@/context/activePage";
+import { navLinks } from "@/app/data/navigation";
 import { useActivePageContext } from "@/context/activePageContext";
 
-interface NavLinkProps {
-  title: string;
-  href: string;
-  page: Page;
-}
-
-const navLinks: NavLinkProps[] = [
-  {
-    title: "Home",
-    href: "/",
-    page: Page.HOME,
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-    page: Page.CONTACT,
-  },
-  {
-    title: "Experience",
-    href: "/experience",
-    page: Page.EXPERIENCE,
-  },
-];
 const Navbar = () => {
   const { activePage } = useActivePageContext();
 

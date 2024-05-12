@@ -3,15 +3,14 @@
 import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
 import Card from "@/components/card";
 import { motion } from "framer-motion";
-import { experiencePageData } from "../data/data";
+import {
+  experienceHeaderData,
+  ExperienceHeaderProps,
+  experiencePageData,
+} from "@/app/data/data";
 import { useEffect } from "react";
 import { Page } from "@/context/activePage";
 import { useActivePageContext } from "@/context/activePageContext";
-
-interface ExperienceHeaderProps {
-  title: String;
-  delay: number;
-}
 
 const ExperienceHeader = (props: ExperienceHeaderProps) => {
   return (
@@ -24,25 +23,6 @@ const ExperienceHeader = (props: ExperienceHeaderProps) => {
       {props.title}
     </motion.h1>
   );
-};
-
-const ExperienceHeaderData = {
-  experience: {
-    title: "Experience 💻",
-    delay: 0.5,
-  },
-  achievements: {
-    title: "Achievements 🏆",
-    delay: 0.8,
-  },
-  education: {
-    title: "Education 📚",
-    delay: 1.1,
-  },
-  volunteering: {
-    title: "Volunteering 🤝",
-    delay: 1.5,
-  },
 };
 
 // Experience Page
@@ -59,19 +39,19 @@ export default function Home() {
         <div className="flex flex-col h-[850px]">
           <SecondaryWrapper>
             <div className="h-full w-full flex flex-col gap-10 py-10 px-4 md:px-20 justify-center m-auto text-start">
-              <ExperienceHeader {...ExperienceHeaderData.experience} />
+              <ExperienceHeader {...experienceHeaderData.experience} />
               {experiencePageData.experience.map((experienceData) => (
                 <Card key={experienceData.delay} {...experienceData} />
               ))}
-              <ExperienceHeader {...ExperienceHeaderData.achievements} />
+              <ExperienceHeader {...experienceHeaderData.achievements} />
               {experiencePageData.achievements.map((achievementData) => (
                 <Card key={achievementData.delay} {...achievementData} />
               ))}
-              <ExperienceHeader {...ExperienceHeaderData.education} />
+              <ExperienceHeader {...experienceHeaderData.education} />
               {experiencePageData.education.map((educationData) => (
                 <Card key={educationData.delay} {...educationData} />
               ))}
-              <ExperienceHeader {...ExperienceHeaderData.volunteering} />
+              <ExperienceHeader {...experienceHeaderData.volunteering} />
               {experiencePageData.volunteering.map((volunteeringData) => (
                 <Card key={volunteeringData.delay} {...volunteeringData} />
               ))}

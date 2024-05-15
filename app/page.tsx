@@ -8,7 +8,7 @@ import Image from "next/image";
 import { SecondaryWrapper } from "@/wrappers/SecondaryWrapper";
 import HomeCard from "@/components/homeCard";
 import { imageStyle } from "./styles/styles";
-import { descriptionWords, skillsTechnologies } from "@/app/data/data";
+import { descriptionWords, skillsTechnologies } from "@/data/data";
 import { useActivePageContext } from "@/context/activePageContext";
 import { Page } from "@/context/activePage";
 
@@ -121,7 +121,7 @@ export default function Home() {
                 className="w-0 h-0 lg:w-full lg:h-full items-center justify-center flex py-10 mt-14"
               >
                 <Image
-                  src="/static/profile.jpeg"
+                  src="/profile.jpeg"
                   alt="My Profile"
                   width={500}
                   height={500}

@@ -7,7 +7,7 @@ import {
   experienceHeaderData,
   ExperienceHeaderProps,
   experiencePageData,
-} from "@/app/data/data";
+} from "@/data/data";
 import { useEffect } from "react";
 import { Page } from "@/context/activePage";
 import { useActivePageContext } from "@/context/activePageContext";

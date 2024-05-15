@@ -1,6 +1,6 @@
 "use client";
 
-import { navLinks } from "@/app/data/navigation";
+import { navLinks } from "@/data/navigation";
 import { useActivePageContext } from "@/context/activePageContext";
 
 const Navbar = () => {

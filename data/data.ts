@@ -8,18 +8,18 @@ export const experiencePageData = {
       logo: "/vcl.png",
     },
     {
-      title: "Web Developer at Enactus UBC",
-      location: "Vancouver, Canada",
-      time: "2024 - Present",
-      delay: 1.0,
-      logo: "/enactus.jpeg",
-    },
-    {
       title: "Software Engineer at SMS Perkasa",
       location: "Surabaya, Indonesia",
       time: "2024 - Present",
       delay: 1.3,
       logo: "/smsperkasa.jpg",
+    },
+    {
+      title: "Web Developer at Enactus UBC",
+      location: "Vancouver, Canada",
+      time: "2024 - Present",
+      delay: 1.0,
+      logo: "/enactus.jpeg",
     },
     {
       title: "Web Developer at BBRwanda",

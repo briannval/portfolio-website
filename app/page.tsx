@@ -1,6 +1,5 @@
 "use client";
 
-import VideoBackground from "@/components/videoBackground";
 import { motion } from "framer-motion";
 import React, { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
@@ -22,7 +21,6 @@ export default function Home() {
 
   return (
     <>
-      <VideoBackground />
       <main className="h-full w-full">
         <div className="flex flex-col h-[850px]">
           <SecondaryWrapper>

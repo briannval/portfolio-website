@@ -31,9 +31,7 @@ const ContactForm = () => {
   } = useForm<Form>({ resolver: zodResolver(contactSchema) });
 
   async function useSubmit({ name, email, umessage }: Form) {
-    console.log(name, email, umessage);
     const response = await sendMail(name, email, umessage);
-    console.log(response);
     setSubmitted(true);
   }
 
@@ -102,21 +100,7 @@ const ContactForm = () => {
         disabled={submitted}
         className="relative bg-transparent border-2 hover:bg-white text-xl text-white font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded-lg inline-flex"
       >
-        Submit
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          className="ml-3 w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-          />
-        </svg>
+        {submitted ? <>Submitted !</> : <>Submit</>}
       </motion.button>
     </form>
   );

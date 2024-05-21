@@ -1,7 +1,7 @@
 export const experiencePageData = {
   experience: [
     {
-      title: "Co-Pilot at UBC VCL",
+      title: "Software Engineer at UBC VCL",
       location: "Vancouver, Canada",
       time: "2024 - Present",
       delay: 0.7,

@@ -30,7 +30,7 @@ export const EmailTemplate = ({
     </Preview>
     <Body style={main}>
       <Container style={container}>
-        <Text style={paragraph}>Message from portfolio from {name},</Text>
+        <Text style={paragraph}>Message from {name}</Text>
         <Text style={paragraph}>{umessage}</Text>
         <Section style={btnContainer}>
           <Button style={button} href="mailto:brianvalentinoadhitya@gmail.com">

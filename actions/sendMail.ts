@@ -19,10 +19,7 @@ export async function sendMail(name: String, email: String, umessage: String) {
       react: EmailTemplate({ name, email, umessage }) as React.ReactElement,
     });
 
-    console.log(data, error);
-
     if (error) {
-      console.log("error 1");
       return JSON.parse(
         JSON.stringify(NextResponse.json({ error }, { status: 400 }))
       );
@@ -31,7 +28,6 @@ export async function sendMail(name: String, email: String, umessage: String) {
       JSON.stringify(NextResponse.json({ data }, { status: 200 }))
     );
   } catch (e) {
-    console.log("error 2");
     return JSON.parse(
       JSON.stringify(NextResponse.json({ e }, { status: 500 }))
     );

@@ -25,9 +25,7 @@ export const EmailTemplate = ({
 }: EmailTemplateProps) => (
   <Html>
     <Head />
-    <Preview>
-      The sales intelligence platform that helps you uncover qualified leads.
-    </Preview>
+    <Preview>A message from {name as string}</Preview>
     <Body style={main}>
       <Container style={container}>
         <Text style={paragraph}>Message from {name}</Text>
@@ -38,7 +36,7 @@ export const EmailTemplate = ({
           </Button>
         </Section>
         <Text style={paragraph}>
-          Email from:
+          Reply to:
           <br />
           {email}
         </Text>

@@ -11,14 +11,14 @@ export const experiencePageData = {
       title: "Software Engineer at SMS Perkasa",
       location: "Surabaya, Indonesia",
       time: "2024 - Present",
-      delay: 1.3,
+      delay: 1.0,
       logo: "/smsperkasa.jpg",
     },
     {
       title: "Web Developer at Enactus UBC",
       location: "Vancouver, Canada",
       time: "2024 - Present",
-      delay: 1.0,
+      delay: 1.3,
       logo: "/enactus.jpeg",
     },
     {

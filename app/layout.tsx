@@ -19,9 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="overflow-y-scroll">
         <Starfield
-          starCount={2000}
+          starCount={5000}
           starColor={[255, 255, 255]}
-          speedFactor={0.15}
+          speedFactor={0.25}
         />
         <ActivePageContextProvider>
           <MainWrapper>{children}</MainWrapper>

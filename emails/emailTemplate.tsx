@@ -5,7 +5,6 @@ import {
   Head,
   Hr,
   Html,
-  Img,
   Preview,
   Section,
   Text,
@@ -31,15 +30,10 @@ export const EmailTemplate = ({
         <Text style={paragraph}>Message from {name}</Text>
         <Text style={paragraph}>{umessage}</Text>
         <Section style={btnContainer}>
-          <Button style={button} href="mailto:brianvalentinoadhitya@gmail.com">
+          <Button style={button} href={`mailto:${email}`}>
             Reply
           </Button>
         </Section>
-        <Text style={paragraph}>
-          Reply to:
-          <br />
-          {email}
-        </Text>
         <Hr style={hr} />
       </Container>
     </Body>
